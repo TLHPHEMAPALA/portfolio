@@ -1,0 +1,390 @@
+
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+:root{
+    --primary: rgb(255, 0, 119);
+    --dark: rgb(44, 1, 19);
+    --nav:white;
+    --secondary:#1efff4;
+    
+}
+
+body{
+    background-color: rgb(26, 26, 26);
+   
+}
+
+/*CSS HOME */
+
+/*CSS DIV HOME PAGE*/
+
+
+.home-page{   
+    padding:30px 40px 30px 40px;
+    font-family: var(--fontfamily);
+    width: 100%;
+    height: 100vh;    
+    background-image:linear-gradient(to bottom, rgba(12, 12, 12, 0.973), rgba(22, 22, 22, 0.856)), url(images/background.jpg) ;   
+    background-size: cover;
+    background-position: center;
+       
+}
+
+.nav{
+    
+    display: flex;
+    justify-content: space-between;   
+}
+
+.navbar.active{
+    display: block;
+}
+
+
+.mylogo{
+    color:var(--nav);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.navbar a{
+    color:var(--nav);
+    text-decoration: none;
+    font-size: 20px;         
+    margin-left: 35px;     
+    transition: .2s; 
+}
+
+.navbar a:hover,
+.navbar a.home
+{
+    color: var(--primary);
+}
+
+
+.home-content{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    padding: 0 10%;        
+    background-size: 100%; 
+    text-align: center;
+}
+
+
+.home-content hr{    
+    margin-top: 20px;
+    border: 1px solid var(--primary);
+}
+
+
+.home-details h1{
+    color: rgb(255, 255, 255);
+    font-size:50px;
+    font-weight:600;
+}
+
+.home-details h4{    
+    margin-bottom: 20px;
+    font-size:20px;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    letter-spacing: 20px;
+}
+
+.social-media-icons{
+    margin-top: 20px;
+}
+
+.social-media-icons a{
+    font-size: 25px;
+    color:var(--primary);
+    letter-spacing: 10px;
+    transition: .2s;
+}
+
+.social-media-icons a:hover{
+    color: white;   
+}
+
+
+/*CSS SECTION SOCIAL MEDIA ICONS*/
+.services{
+    padding:30px 40px 30px 40px;
+}
+
+.services h1{   
+    margin-top: 50px;
+    margin-bottom: 60px;
+    color: white;
+    font-size: 50px;   
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+    
+ }
+ 
+ .services h3,p{   
+    color: white        
+}
+  
+.services-container{
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+} 
+
+.services-box{
+    flex: 1 1 30rem;
+    background: linear-gradient(to right, rgb(41, 41, 41), rgb(0, 0, 0),rgb(26, 26, 26));
+    padding:3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 3px solid var(--primary);
+    transition: .5s ease;
+    
+}
+
+.services-box:hover{
+    border-color:rgb(255, 0, 140) ;  
+    transform: scale(1.02);
+}
+
+
+.services-box i {
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+}
+
+
+.btn{
+    margin-top: 50px;
+    display: inline-block;
+    padding:5px 8px;
+    background: #ff0080;
+    border-radius: 6px;
+    box-shadow: 0 0 10 #ff0080 ;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    transition: .5s ease;
+    text-decoration: none;
+    border: 2px solid white;
+}
+
+.btn:hover{
+    background: #4e0229;
+    box-shadow: none;
+}
+
+ /*End Services Css*/
+
+
+
+/****************************************
+*****************************************
+*****************************************
+****************************************/
+
+/*BREAKPOINTS*/
+
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+    #menu-open{   
+        display: inline-block;    
+        background: transparent;
+        font-size:2.5rem;
+        color: #ffffff;
+        cursor: pointer;
+    }   
+
+    #menu-close{
+        display: none;
+        background: transparent;
+        font-size:2.5rem;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .navbar{
+        position:fixed;
+        top: 80px;       
+        right: 5%;  
+        width:40%;      
+        flex-direction: column;
+        background: black;
+        display: none;  
+        
+    }
+    .navbar a{  
+        display: block;
+        font-size: 15px;
+        margin: 20px -60px ;                           
+        display: grid;      
+        place-items: center;  
+    }
+    
+    .home-details h4{        
+        font-size:10px;
+        letter-spacing: 5px;
+    }
+
+    .home-details h1{        
+        font-size:15px;
+        margin-bottom: 10px;
+    }   
+
+    .social-media-icons a{
+        font-size: 15px;        
+    }
+    
+}
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 600px) {
+    #menu-open{   
+        display: inline-block;    
+        background: transparent;
+        font-size:2.5rem;
+        color: #ffffff;
+        cursor: pointer;
+    }   
+
+    #menu-close{
+        display: none;
+        background: transparent;
+        font-size:2.5rem;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .navbar{
+        position:fixed;
+        top: 80px;       
+        right: 5%;  
+        width:40%;      
+        flex-direction: column;
+        background: black;
+        display: none;  
+        
+    }
+    .navbar a{  
+        display: block;
+        font-size: 18px;
+        margin: 20px -60px ;                           
+        display: grid;      
+        place-items: center;  
+    }
+
+    .home-details h4{        
+        font-size:10px;
+        letter-spacing: 10px;
+    }
+
+    .home-details h1{        
+        font-size:34px;
+    }   
+     
+    
+
+}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+    #menu-open{   
+        display: inline-block;    
+        background: transparent;
+        font-size:2.5rem;
+        color: #ffffff;
+        cursor: pointer;
+    }   
+
+    #menu-close{
+        display: none;
+        background: transparent;
+        font-size:2.5rem;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .navbar{        
+        position:fixed;
+        top: 80px;       
+        right: 5%;  
+        width:40%;      
+        flex-direction: column;
+        background: black;
+        display: none;  
+        
+    }
+    .navbar a{          
+        display: block;
+        font-size: 20px;
+        margin: 20px -60px;                           
+        display: grid;      
+        place-items: center;  
+    }
+
+    .home-details h4{        
+        font-size:10px;
+        letter-spacing: 15px;
+    }
+
+    .home-details h1{        
+        font-size:40px;
+    }   
+     
+    .social-media-icons a{
+        font-size: 30px;        
+    }
+    
+}
+
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {    
+    #menu-open,#menu-close{
+        display: none;
+    }     
+
+    .home-details h1{        
+        font-size:40px;
+        font-weight:600;
+    }
+    
+    .home-details h4{           
+        font-size:15px;
+        font-weight: 300;        
+        letter-spacing: 20px;
+    }
+
+}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {    
+    #menu-open,#menu-close{
+        display: none;
+    }
+        
+    .home-details h1{        
+        font-size:50px;
+        font-weight:600;
+    }
+    
+    .home-details h4{           
+        font-size:20px;
+        font-weight: 300;        
+        letter-spacing: 20px;
+    }
+    
+}    
+
